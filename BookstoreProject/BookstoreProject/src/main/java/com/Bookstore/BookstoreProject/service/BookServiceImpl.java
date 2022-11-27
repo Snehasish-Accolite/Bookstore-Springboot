@@ -1,4 +1,4 @@
-package com.Bookstore.service;
+package com.Bookstore.BookstoreProject.service;
 
 import java.util.List;
 import java.util.Optional;
@@ -8,8 +8,10 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.Bookstore.model.UserDetails;
-import com.Bookstore.repository.BookRepository;
+import com.Bookstore.BookstoreProject.model.UserDetails;
+import com.Bookstore.BookstoreProject.repository.BookRepository;
+
+
 
 @Service
 @Transactional
@@ -26,13 +28,13 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public UserDetails updateUser(UserDetails u) {
-        Optional<UserDetails> Obj1 = this.repository.findById(u.getUserId());
+        Optional<UserDetails> Obj1 = this.repository.findById(u.getUserid());
         if(Obj1.isPresent()){
             UserDetails Ud = Obj1.get();
-            Ud.setUserId(u.getUserId());
+            Ud.setUserid(u.getUserid());
             Ud.setUsername(u.getUsername());
-            Ud.setEmailId(u.getEmailId());
-            Ud.setPhoneNo(u.getPhoneNo());
+            Ud.setEmailid(u.getEmailid());
+            Ud.setPhoneno(u.getPhoneno());
            
             return this.repository.save(Ud);
         }

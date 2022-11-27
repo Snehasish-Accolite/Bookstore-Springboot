@@ -1,4 +1,4 @@
-package com.Bookstore.controller;
+package com.Bookstore.BookstoreProject.controller;
 
 import java.util.List;
 
@@ -12,8 +12,11 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.Bookstore.model.UserDetails;
-import com.Bookstore.service.BookService;
+import com.Bookstore.BookstoreProject.model.UserDetails;
+import com.Bookstore.BookstoreProject.service.BookService;
+
+
+
 
 @RestController
 public class BookstoreController {
@@ -40,11 +43,9 @@ public class BookstoreController {
 
 	    @PutMapping("/update/{userId}")
 	    private ResponseEntity<UserDetails> updateUser(@PathVariable int userId,@RequestBody UserDetails u){
-	        u.setUserId(userId);
+	        u.setUserid(userId);
 	        return ResponseEntity.ok().body(this.service.updateUser(u));
 	    }
 
 	    }
-
-
 

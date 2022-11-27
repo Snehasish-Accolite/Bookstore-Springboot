@@ -1,9 +1,11 @@
-package com.Bookstore.service;
+package com.Bookstore.BookstoreProject.service;
 
 import java.util.List;
 
+import com.Bookstore.BookstoreProject.model.UserDetails;
 
-import com.Bookstore.model.UserDetails;
+
+
 
 public interface BookService {
 
