@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackageClasses=BookstoreProjectApplication.class)
+//@ComponentScan(basePackageClasses=BookstoreProjectApplication.class)
 public class BookstoreProjectApplication {
 
 	public static void main(String[] args) {

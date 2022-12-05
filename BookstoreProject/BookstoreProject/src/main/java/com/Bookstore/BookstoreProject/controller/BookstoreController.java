@@ -32,7 +32,7 @@ public class BookstoreController {
 	        return ResponseEntity.ok().body(this.service.setUser(u));
 	    }
 	    @GetMapping(path="/userdetails")
-	    private ResponseEntity<List<UserDetails>> dispUsers(){
+	    private ResponseEntity<List<UserDetails>> dispUser(){
 	        return  ResponseEntity.ok().body(this.service.getUser());
 	    }
 
